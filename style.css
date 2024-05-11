@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:wght@500;700&display=swap");
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+:root {
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+    --white: white;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LightGrayishBlue);
+    min-height: 100vh;
+    font-size: 13px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 45rem;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.leftSide {
+    width: 264px;
+    overflow: hidden;
+}
+
+.leftSide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale(0.8);
+    transform-origin: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem 1rem 2.5rem;
+    width: 60%;
+
+}
+
+.heading h3 {
+    color: var(--VeryDarkGrayishBlue);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding: 0.7rem 0;
+}
+
+.heading p {
+    color: var(--DesaturatedDarkBlue);
+    line-height: 1.4;
+    padding: 0.5rem 0 1rem 0;
+    font-size: 0.8rem;
+
+}
+
+.profileBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#profileContent {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+#profileImg {
+    width: 50px;
+    height: 50px;
+}
+
+#profileImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#profileHeading h4 {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+#profileHeading span {
+    color: var(--GrayishBlue);
+}
+
+.notification {
+    background-color: var(--VeryDarkGrayishBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    position: absolute;
+    gap: 20px;
+    border-radius: 5px;
+    bottom: calc(100% + 0px);
+    left: 70%;
+}
+
+.notification span {
+    color: var(--GrayishBlue);
+    letter-spacing: 2px;
+
+}
+
+#shareIcon button {
+    border: 0px;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+#shareIcon button:hover,
+#shareIcon button:active {
+    background-color: var(--VeryDarkGrayishBlue);
+
+}
+
+
+
+.active {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body{
+        font-size: 0.8rem;
+    }
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        width: 25.5rem;
+        height: 500px;
+        
+    }
+    .leftSide {
+        width: 100%;
+        height: 50px;
+        height:260px;
+        
+        overflow: hidden;
+    }
+    .leftSide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      
+        border-radius: 10px 10px 0px 0px;
+    }
+    .rightSide{
+        width: 24rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0.5rem 1rem;
+    }
+    .heading h3 {
+        font-size: 1.2rem;
+    }
+    .heading p {
+        font-size: 0.7rem;
+    }
+    .notification{
+        position: static;
+        width: 100%;
+        
+    }
+
+}
